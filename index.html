@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty</title>
+</head>
+<body>
+
+    <!--HEADER-->
+    <header class="header">
+        <h1>Rick & Morty Explorer</h1>
+
+        <!--CAMBIAR MODO CLARO/OSCURO-->
+        <div class="theme-switch">
+            <span>Claro</span>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Oscuro</span>
+        </div>
+    </header>
+
+    <!--BARRA DE BUSQUEDA-->
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Cargando..">
+        <button id="searchBtn">Buscar</button>
+    </section>
+
+    <!--CONTENEDOR DE TARJETAS-->
+    <section id="container" class="cards-container"></section>
+
+    <!--MENSAJE-->
+    <p id="loading" class="loading hidden">Cargando...</p>
+    <p id="error" class="error hidden">No se encontraron resultados.</p>
+
+
+    
+</body>
+</html>
