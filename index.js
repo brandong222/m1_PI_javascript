@@ -72,3 +72,14 @@ function renderizarCard(list) {
 
 // Cargar personajes al inicio
 fetchCharacters();
+
+
+//barra de estilo mejorada
+
+searchBtn.addEventListener("click", () => {
+    fetchCharacters(searchInput.value.trim());
+});
+
+searchInput.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") fetchCharacters(searchInput.value.trim());
+});
