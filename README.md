@@ -41,8 +41,15 @@ Renderizado dinámico con JavaScript.
 - Eventos para búsqueda mediante botón o tecla Enter
 
 
-## modo oscuro y claro
+## Link
 
+https://brandong222.github.io/m1_PI_javascript/
+
+$
+
+## Modo oscuro / claro
 
 ![](/assets/mode_dark.png)
 ![](/assets/mode_light.png)
+
+
