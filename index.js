@@ -1,5 +1,7 @@
+//api rick and morty
 const API_URL = "https://rickandmortyapi.com/api/character";
 
+//elementos del DOM
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const container = document.getElementById("container");
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.checked = savedTheme === "dark";
 });
 
+//cambiar tema
 themeToggle.addEventListener("change", () => {
     const theme = themeToggle.checked ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", theme);
@@ -36,6 +39,7 @@ async function fetchCharacters(name = "") {
     error.classList.add("hidden");
     container.innerHTML = "";
 
+    //llamar api con manejo de errores
     try {
         const res = await fetch(`${API_URL}/?name=${name}`);
         const data = await res.json();
@@ -46,7 +50,7 @@ async function fetchCharacters(name = "") {
             error.classList.remove("hidden");
             return;
         }
-
+//llamar funcion renderizar
         renderizarCard(data.results);
 
     } catch (err) {
@@ -76,10 +80,12 @@ fetchCharacters();
 
 //barra de estilo mejorada
 
+//eventos de busqueda
 searchBtn.addEventListener("click", () => {
     fetchCharacters(searchInput.value.trim());
 });
 
+//buscar al presionar enter
 searchInput.addEventListener("keyup", (e) => {
     if (e.key === "Enter") fetchCharacters(searchInput.value.trim());
 });
